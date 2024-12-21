@@ -177,7 +177,7 @@ async def attack(update: Update, context: CallbackContext):
     ip, port, duration = args
     try:
         duration = int(duration)
-        if duration > 120:
+        if duration > 600:
             response = "*⚠️ Error: Time interval must be less than or equal to 120 seconds.*"
             await context.bot.send_message(chat_id=chat_id, text=response, parse_mode='Markdown')
             return
